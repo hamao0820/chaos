@@ -15,7 +15,7 @@ import (
 const (
 	screenWidth  = 640
 	screenHeight = 640
-	plotCount    = int(1e7)
+	plotCount    = int(1e6)
 )
 
 var (
@@ -75,7 +75,7 @@ func (g *Game) updateOffscreen() {
 				ratio = 0.99
 			}
 
-			k := 1 - math.Pow(1-ratio, 70)
+			k := 1 - math.Pow(1-ratio, 50)
 
 			off := y*screenWidth*4 + x*4
 			g.offscreenPix[off] = 0xff
